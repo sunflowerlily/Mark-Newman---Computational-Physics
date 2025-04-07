@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Aug 20 23:09:33 2013
-
-@author: akels
-"""
-from __future__ import division, print_function
-#from os import sys
-#sys.path.append('cpresources')
 from pylab import *
 
 from numpy.random import random
@@ -24,3 +15,4 @@ decayed = arange(1,N+1)
 surrived = -decayed + N
 
 plot(t_dec,surrived)
+show()

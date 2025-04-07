@@ -9,7 +9,7 @@ from __future__ import division, print_function
 #sys.path.append('cpresources')
 from pylab import *
 
-from visual import sphere,rate, display
+from vpython import sphere, rate, canvas  # 修改这里
 from random import randint
 
 
@@ -18,7 +18,7 @@ L = 101
 i = 50
 j = 50
 
-d = display()
+d = canvas()  # 修改这里
 s = sphere()
 s.pos = i,j,0
 d.autoscale = False
@@ -38,3 +38,4 @@ for t in arange(1e6):
 	elif a==4:
 		if j==0: continue
 		j-=1
+show()

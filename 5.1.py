@@ -25,5 +25,6 @@ for k in range(1,N):
 	
 plot(t,distance,label='distance')
 plot(t,v,label='velocity')
-legend()
+#legend()
+#show()
 #print(s*h)

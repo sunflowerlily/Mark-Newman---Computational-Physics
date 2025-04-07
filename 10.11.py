@@ -73,7 +73,9 @@ class dimer_grid:
 		
 	def index_lattice(f):
 		
-		def g(self,(i,j),(m,n)):
+		def g(self, ij, mn):
+			i,j = ij  # 手动解包第一个元组
+			m,n = mn  # 手动解包第二个元组
 			
 			# correct order
 			if i>m or j>n:
@@ -83,9 +85,9 @@ class dimer_grid:
 				pos = 0 # right
 			elif j<n:
 				pos=1 # bottom
-			
-			return f(self,i,j,pos)
-		return g
+				
+				return f(self,i,j,pos)
+			return g
 	
 	@index_lattice
 	def add(self,i,j,pos):
@@ -99,14 +101,16 @@ grid_repr = dimer_grid()
 grid_repr.remove((1,1),(1,2))
 grid_repr.container[10][10][1].visible = False
 
-def setvalue((i,j),(m,n)):
-	
-	for value in range(1,N*N//2):
-		if not value in grid:
-			break
-	
-	grid[i,j] = value
-	grid[m,n] = value
+def setvalue(ij, mn):
+    i,j = ij  # 手动解包第一个元组
+    m,n = mn  # 手动解包第二个元组
+    
+    for value in range(1,N*N//2):
+        if not value in grid:
+            break
+    
+    grid[i,j] = value
+    grid[m,n] = value
 
 T = Tmax
 t = 0

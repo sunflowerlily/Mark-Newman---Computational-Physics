@@ -14,7 +14,7 @@ b = 2.0
 h = (b-a)/N
 
 s = f(a) + f(b) + 4*f(b-h)
-for k in range(1,N/2):
+for k in range(1,N//2):
     s += 4*f(a + (2*k-1)*h) + 2*f(a+2*k*h)
 
 #from math import abs

@@ -81,3 +81,4 @@ for k in range(steps):
 	Mplot.append(M)
 	
 plot(Mplot)
+show()

@@ -1,12 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Aug 21 12:13:42 2013
 
-@author: akels
-"""
-from __future__ import division, print_function
-#from os import sys
-#sys.path.append('cpresources')
 from pylab import *
 
 from numpy.random import random
